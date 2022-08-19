@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="./stylesheets/stylesheet.css">
+    <script src="index.js" defer></script>
+    <title>Hubspot Demo</title>
+</head>
+
+<body>
+    <header>
+        <nav style="padding: 10px;" class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-0">
+                <a class="navbar-brand" href="./index.html">
+                    <img width="200px"
+                        src="https://www.appsadmins.com/hs-fs/hubfs/hubspot_500X1891.png?width=500&name=hubspot_500X1891.png"
+                        alt="Hubspot Demo">
+                </a>
+                <!-- Button -->
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Collapse -->
+                <div class="navbar-collapse collapse" id="navbar-default">
+                    <ul class="navbar-nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#listaContactos">
+                                Lista de contactos
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#formularioContacto">
+                                Crear Contacto
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <div id="listaContactosContainer" class="py-4">
+            <h1 class="text-center">Lista de Contactos</h1>
+            <table id="listaContactosTable" class="table table-hover">
+                <thead id="listaContactosTableHead">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Row ID</th>
+                        <th scope="col">Document ID</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody id="listaContactosTableBody">
+                </tbody>
+            </table>
+        </div>
+        <div id="formularioContactoContainer" class="py-4">
+            <h1 class="text-center">Crear o Actualizar Contacto</h1>
+            <div class="card" style="width: 38rem;margin: auto;">
+                <div class="card-body">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="createContact-tab" data-bs-toggle="tab"
+                                data-bs-target="#createContactPanel" type="button" role="tab"
+                                aria-controls="createContactPanel" aria-selected="true">Crear</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="updateContact-tab" data-bs-toggle="tab"
+                                data-bs-target="#updateContactPanel" type="button" role="tab"
+                                aria-controls="updateContactPanel" aria-selected="false">Actualizar</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="createContactPanel" role="tabpanel"
+                            aria-labelledby="createContact-tab">
+                            <form id="contactsForm">
+                                <div class="form-group formSection">
+                                    <label for="documentId">Document ID</label>
+                                    <input type="text" class="form-control" id="documentId" name="documentId"
+                                        aria-describedby="emailHelp" placeholder="Document ID">
+
+                                </div>
+                                <div class="form-group formSection">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" name="firstName"
+                                        placeholder="First Name">
+                                </div>
+                                <div class="form-group formSection">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName" name="lastName"
+                                        placeholder="Last Name">
+                                </div>
+                                <button type="submit" class="btn btn-primary formSection">Submit</button>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="updateContactPanel" role="tabpanel"
+                            aria-labelledby="updateContact-tab">
+                            <form id="updateContactsForm">
+                                <div class="form-group formSection">
+                                    <label for="documentId">ID</label>
+                                    <input type="text" class="form-control" id="rowId" name="rowId" placeholder="ID">
+                                </div>
+                                <div class="form-group formSection">
+                                    <label for="documentId">Document ID</label>
+                                    <input type="text" class="form-control" id="documentId" name="documentId"
+                                        placeholder="Document ID">
+                                </div>
+                                <div class="form-group formSection">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" name="firstName"
+                                        placeholder="First Name">
+                                </div>
+                                <div class="form-group formSection">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName" name="lastName"
+                                        placeholder="Last Name">
+                                </div>
+                                <button type="submit" class="btn btn-primary formSection">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
