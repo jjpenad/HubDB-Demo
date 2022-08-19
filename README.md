@@ -6,6 +6,16 @@ This is a simple API REST app using HubDB from Hubspot
 
 ### 1. Environment variables
 
+¡¡¡ IMPORTANT: Make sure you have Nodejs installed in your computer and it is correctly configured as path for your computer !!!
+
+To make sure of that run the following command from cmd to detect the node version you have installed:
+
+```
+node -v
+```
+
+if not installed, you can do it in the following link [NodeJS Official Site](https://nodejs.org/en/)
+
 In order to running the project, first some environment variables are needed. For this, create a .env file in the root directory of the project with the following format:
 
 ```
